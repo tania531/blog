@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('checklist')
+angular.module('blog')
 .controller('UsersCtrl', ['$scope', 'User', '$state', function($scope, User, $state){
   $scope.name = $state.current.name;
 

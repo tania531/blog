@@ -1,2 +1,2 @@
-angular.module('checklist')
-.constant('firebaseUrl', 'https://checklist-x.firebaseio.com/');
+angular.module('blog')
+.constant('firebaseUrl', 'https://blog-tania.firebaseio.com/');

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('checklist')
+angular.module('blog')
 .controller('NavCtrl', ['$scope', 'User', '$state', '$rootScope', function($scope, User, $state, $rootScope){
 
   $scope.afAuth.$onAuth(function(data) {
@@ -10,7 +10,7 @@ angular.module('checklist')
       $rootScope.activeUser = null;
     }
 
-    $state.go('home');
+  //  $state.go('home');
   });
 
   $scope.logout = function(){

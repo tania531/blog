@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('checklist')
+angular.module('blog')
 .factory('User', ['$rootScope', function($rootScope){
 
   function register(user){

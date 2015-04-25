@@ -1,0 +1,31 @@
+h3 BLOGS
+
+form(name='blogForm', novalidate)
+  .form-group
+    label(for='title') Title
+    input.form-control#title(name='title', type='text', ng-model='blog.title')
+
+  .form-group
+    label(for='content') Content
+    textarea.form-control#priority(name='content', ng-model='blog.content')
+      
+  .form-group
+    button.btn.btn-primary(ng-click='addBlog(blog)') Add
+    
+table.table.table-striped
+  thead
+    tr
+      th Edit
+      th Save
+      th Delete
+      th(ng-click='sort("title")') Title
+      th(ng-click='sort("content")') Content
+      th(ng-click='sort("createdAt")') Created At
+  tbody
+    tr(ng-repeat='blog in afBlogs')
+      td: button.btn.btn-info.btn-xs(ng-click='editBlog(blog)') Edit
+      td: button.btn.btn-info.btn-xs(ng-click='updateBlog(blog)') Save
+      td: button.btn.btn-danger.btn-xs(ng-click='deleteBlog(blog)') Delete
+      td {{blog.title}}
+      td {{blog.content}}
+      td {{blog.createdAt | date:'MM/dd/yyyy @ h:mma'}}
