@@ -6,16 +6,13 @@ angular.module('blog')
   var afBlogs;
 
   function init(){
-    // fbBlogs = $rootScope.fbRoot.child('users/' + $rootScope.activeUser.uid + '/blogs');
     fbBlogs = $rootScope.fbRoot.child('blogs');
-
     afBlogs = $firebaseArray(fbBlogs);
     return afBlogs;
   }
 
-
   function save(blog){
-      return afBlogs.$save(blog);
+    return afBlogs.$save(blog);
   }
 
   function add(blog){

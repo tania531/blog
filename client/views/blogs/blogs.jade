@@ -22,10 +22,10 @@ table.table.table-striped
       th Edit
       th Save
       th Delete
-      th(ng-click='sort("title")') Title
-      th(ng-click='sort("blurb")') Blurb
-      th(ng-click='sort("content")') Content
-      th(ng-click='sort("createdAt")') Created At
+      th Title
+      th Blurb
+      th Content
+      th Created At
   tbody
     tr(ng-repeat='blog in afBlogs')
       td: button.btn.btn-info.btn-xs(ng-click='editBlog(blog)') Edit

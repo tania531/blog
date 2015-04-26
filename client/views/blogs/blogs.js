@@ -15,13 +15,10 @@ angular.module('blog')
   $scope.updateBlog = function(blog){
     $scope.blog = {};
     Blog.save(blog);
-
   };
-
 
   $scope.saveBlog = function(blog){
     Blog.save(blog);
-    console.log('$scope.blog');
   };
 
   $scope.addBlog = function(blog){

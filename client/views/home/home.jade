@@ -3,9 +3,9 @@ h3 HOME - Click to Read
 table.table.table-striped
   thead
     tr
-      th(ng-click='sort("title")') Title
-      th(ng-click='sort("content")') Blurb
-      th(ng-click='sort("createdAt")') Created At
+      th Title
+      th Blurb
+      th Created At
   tbody
     tr(ng-repeat='blog in afBlogs')
       td(ng-click='readBlog(blog)', class='homeTitle') {{blog.title}}

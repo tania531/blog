@@ -10,7 +10,7 @@ angular.module('blog')
       $rootScope.activeUser = null;
     }
 
-  //  $state.go('home');
+   $state.go('home');
   });
 
   $scope.logout = function(){
