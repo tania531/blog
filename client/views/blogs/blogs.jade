@@ -1,4 +1,4 @@
-h3 BLOGS
+h3 Blog Dashboard
 
 form(name='blogForm', novalidate)
   .form-group
@@ -6,8 +6,12 @@ form(name='blogForm', novalidate)
     input.form-control#title(name='title', type='text', ng-model='blog.title')
 
   .form-group
+    label(for='blurb') Blurb
+    input.form-control#blurb(name='blurb', type='text', ng-model='blog.blurb')
+      
+  .form-group
     label(for='content') Content
-    textarea.form-control#priority(name='content', ng-model='blog.content')
+    textarea.form-control#content(name='content', ng-model='blog.content')
       
   .form-group
     button.btn.btn-primary(ng-click='addBlog(blog)') Add
@@ -19,6 +23,7 @@ table.table.table-striped
       th Save
       th Delete
       th(ng-click='sort("title")') Title
+      th(ng-click='sort("blurb")') Blurb
       th(ng-click='sort("content")') Content
       th(ng-click='sort("createdAt")') Created At
   tbody
@@ -27,5 +32,6 @@ table.table.table-striped
       td: button.btn.btn-info.btn-xs(ng-click='updateBlog(blog)') Save
       td: button.btn.btn-danger.btn-xs(ng-click='deleteBlog(blog)') Delete
       td {{blog.title}}
+      td {{blog.blurb}}
       td {{blog.content}}
       td {{blog.createdAt | date:'MM/dd/yyyy @ h:mma'}}

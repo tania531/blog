@@ -13,9 +13,11 @@ angular.module('blog')
   };
 
   $scope.updateBlog = function(blog){
-    Blog.save(blog);
     $scope.blog = {};
+    Blog.save(blog);
+
   };
+
 
   $scope.saveBlog = function(blog){
     Blog.save(blog);
@@ -25,6 +27,7 @@ angular.module('blog')
   $scope.addBlog = function(blog){
     var o = {
       title: blog.title,
+      blurb: blog.blurb,
       content: blog.content,
       createdAt: $window.Firebase.ServerValue.TIMESTAMP
     };

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('blog')
-.factory('Blog', ['$rootScope', '$firebaseArray', function($rootScope, $firebaseArray){
+.factory('Blog', ['$rootScope', '$firebaseArray', '$firebaseObject', function($rootScope, $firebaseArray, $firebaseObject){
   var fbBlogs;
   var afBlogs;
 
@@ -13,8 +13,9 @@ angular.module('blog')
     return afBlogs;
   }
 
+
   function save(blog){
-    return afBlogs.$save(blog);
+      return afBlogs.$save(blog);
   }
 
   function add(blog){
