@@ -1,15 +1,17 @@
-h3 HOME - Click to Read
+h3 HOME - Click Title to Read
 
 table.table.table-striped
   thead
     tr
       th Title
       th Blurb
+      th Author
       th Created At
   tbody
     tr(ng-repeat='blog in afBlogs')
       td(ng-click='readBlog(blog)', class='homeTitle') {{blog.title}}
       td {{blog.blurb}}
+      td {{blog.author}}
       td {{blog.createdAt | date:'MM/dd/yyyy @ h:mma'}}
       
       

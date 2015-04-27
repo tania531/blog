@@ -10,6 +10,10 @@ form(name='blogForm', novalidate)
     input.form-control#blurb(name='blurb', type='text', ng-model='blog.blurb')
       
   .form-group
+    label(for='author') Author
+    input.form-control#author(name='author', type='text', ng-model='blog.author')
+  
+  .form-group
     label(for='content') Content
     textarea.form-control#content(name='content', ng-model='blog.content')
       
@@ -24,6 +28,7 @@ table.table.table-striped
       th Delete
       th Title
       th Blurb
+      th Author
       th Content
       th Created At
   tbody
@@ -33,5 +38,6 @@ table.table.table-striped
       td: button.btn.btn-danger.btn-xs(ng-click='deleteBlog(blog)') Delete
       td {{blog.title}}
       td {{blog.blurb}}
+      td {{blog.author}}
       td {{blog.content}}
       td {{blog.createdAt | date:'MM/dd/yyyy @ h:mma'}}

@@ -25,6 +25,7 @@ angular.module('blog')
     var o = {
       title: blog.title,
       blurb: blog.blurb,
+      blurb: blog.author,
       content: blog.content,
       createdAt: $window.Firebase.ServerValue.TIMESTAMP
     };
